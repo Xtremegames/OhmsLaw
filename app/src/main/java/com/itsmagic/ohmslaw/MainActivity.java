@@ -31,8 +31,6 @@ public class MainActivity extends ActionBarActivity {
         textR = (EditText) findViewById(R.id.editText2R);
         textP = (EditText) findViewById(R.id.editTextP);
         boton = (Button) findViewById(R.id.button);
-        resultado = (TextView) findViewById(R.id.resultado);
-        potencia = (TextView) findViewById(R.id.textView2);
 
 
         boton.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
                 float V = 0;
                 float I = 0;
                 float P = 0;
-                float p = 0;
+
                 float r = 0;
                 //Declarar TOASTS
                 Toast toast2 =
@@ -91,20 +89,25 @@ public class MainActivity extends ActionBarActivity {
 
                 if(TextUtils.isEmpty(textI.getText())){
                     r = V / R;
+                    I = r;
 
-                    resultado.setText("Resultado: "+r);
+
+                    textI.setText(String.valueOf(r));
                 }
 
                 if(TextUtils.isEmpty(textV.getText())){
                     r = I / R;
+                    V = r;
+                    textV.setText(String.valueOf(r));
 
-                    resultado.setText("Resultado: "+r);
+
                 }
 
                 if(TextUtils.isEmpty(textR.getText())){
                     r = V / I;
+                    R = r;
 
-                    resultado.setText("Resultado: "+r);
+                    textR.setText(String.valueOf(r));
                 }
 
                 if(TextUtils.isEmpty(textR.getText()) & TextUtils.isEmpty(textI.getText()) & TextUtils.isEmpty(textV.getText()) & TextUtils.isEmpty(textP.getText())){
@@ -112,13 +115,14 @@ public class MainActivity extends ActionBarActivity {
                 }
 
                 if(R > 0 & V > 0 & I > 0) {
-                    toast2.show();
+
                 }
 
-                if(TextUtils.isEmpty(textP.getText())){
-                    p = V * I;
-                    potencia.setText("Potencia :"+ p);
-                }
+
+                    r = V * I;
+
+                    textP.setText(String.valueOf(r));
+
 
             }
         });

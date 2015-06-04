@@ -21,13 +21,12 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editTextV"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="99dp"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView"
-         />
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/editTextP"
+        android:layout_alignLeft="@+id/editTextP"
+        android:layout_alignStart="@+id/editTextP"
+        android:layout_toLeftOf="@+id/textView5"
+        android:layout_toStartOf="@+id/textView5" />
 
     <EditText
         android:hint="          R"
@@ -47,8 +46,9 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editText3I"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/editTextV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -56,17 +56,11 @@
         android:text="Calcular"
         android:id="@+id/button"
         android:layout_below="@+id/editText3I"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="holi"
-        android:id="@+id/resultado"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="80dp"
+        android:layout_alignRight="@+id/editText3I"
+        android:layout_alignEnd="@+id/editText3I"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
 
     <EditText
         android:hint="                      P"
@@ -86,9 +80,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Potencia = ?"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/resultado"
-        android:layout_centerHorizontal="true" />
+        android:text="P:"
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/editTextP"
+        android:layout_toLeftOf="@+id/editTextP"
+        android:layout_toStartOf="@+id/editTextP" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="V: "
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/editTextV"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="  R:"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/editText2R"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="I:"
+        android:id="@+id/textView6"
+        android:layout_alignBottom="@+id/editText3I"
+        android:layout_toLeftOf="@+id/editText3I"
+        android:layout_toStartOf="@+id/editText3I" />
 
 </RelativeLayout>
